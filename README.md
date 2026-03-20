@@ -29,7 +29,7 @@ aws iam create-policy \
     --policy-document file://iam-policy.json
 ```
 
-### CREATE IAM ROLE AND K8 SERVICEACCOUNT MAPPING BETWEEN IAM ROLE AND K8S SERVICE
+### CREATE IAM ROLE AND K8 SERVICEACCOUNT AND THIS ALSO MAPS BETWEEN IAM ROLE AND K8S SERVICE
 
 ```bash
 eksctl create iamserviceaccount \
@@ -40,5 +40,15 @@ eksctl create iamserviceaccount \
 --override-existing-serviceaccounts \
 --region $REGION_CODE \
 --approve
+```
+
+### INSTALL LOAD BALANCER CONTROLLER DRIVERS
+
+```bash
+helm repo add eks https://aws.github.io/eks-charts
+```
+
+```bash
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 ```
 

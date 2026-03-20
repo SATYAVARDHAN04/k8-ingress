@@ -52,3 +52,14 @@ helm repo add eks https://aws.github.io/eks-charts
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 ```
 
+```bash
+kubectl get sa
+```
+
+```bash
+kubectl get sa -n kube-system
+```
+
+```bash
+kubectl get pods -n kube-system
+```

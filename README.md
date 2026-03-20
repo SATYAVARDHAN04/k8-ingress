@@ -67,3 +67,7 @@ kubectl get pods -n kube-system
 ```bash
 kubectl logs <pod-name> -n kube-system
 ```
+
+```bash
+kubectl describe ingress <ingress_name>
+```

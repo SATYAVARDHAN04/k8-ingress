@@ -15,13 +15,13 @@ eksctl utils associate-iam-oidc-provider \
     --approve
 ```
 
-DOWNLOAD IAM POLICY
+### DOWNLOAD IAM POLICY
 
 ```bash
 curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v3.1.0/docs/install/iam_policy.json
 ```
 
-CREATE IAM POLICY
+### CREATE IAM POLICY
 
 ```bash
 aws iam create-policy \
@@ -29,7 +29,7 @@ aws iam create-policy \
     --policy-document file://iam-policy.json
 ```
 
-CREATE IAM ROLE AND K8 SERVICEACCOUNT MAPPING BETWEEN IAM ROLE AND K8S SERVICE
+### CREATE IAM ROLE AND K8 SERVICEACCOUNT MAPPING BETWEEN IAM ROLE AND K8S SERVICE
 
 ```bash
 eksctl create iamserviceaccount \

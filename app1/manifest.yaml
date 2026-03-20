@@ -51,6 +51,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:xxx
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/group.name: satyology
 spec:
   ingressClassName: alb
   rules:

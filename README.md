@@ -63,3 +63,7 @@ kubectl get sa -n kube-system
 ```bash
 kubectl get pods -n kube-system
 ```
+
+```bash
+kubectl logs <pod-name> -n kube-system
+```

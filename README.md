@@ -4,7 +4,8 @@
 
 ```bash
 REGION_CODE=us-east-1
-CLUSTER=roboshop-dev
+CLUSTER=roboshop-newproject
+ID=517695827891
 ```
 
 
@@ -36,7 +37,7 @@ eksctl create iamserviceaccount \
 --cluster=$CLUSTER \
 --namespace=kube-system \
 --name=aws-load-balancer-controller \
---attach-policy-arn=arn:aws:iam::5714785:policy/AWSLoadBalancerControllerIAMPolicy \
+--attach-policy-arn=arn:aws:iam::$ID:policy/AWSLoadBalancerControllerIAMPolicy \
 --override-existing-serviceaccounts \
 --region $REGION_CODE \
 --approve

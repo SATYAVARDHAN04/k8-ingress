@@ -48,7 +48,7 @@ metadata:
   name: app-2
   annotations:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:xxx
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:517695827891:certificate/71c09418-8c4c-417f-9c9f-9eda5e9013a0
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: satyology
